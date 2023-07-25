@@ -22,7 +22,7 @@ hello() {
         fi
 
         days_passed=$(( ($(date +%s) - $(date +%s -ud "$user_input")) / 3600 / 24 ))
-        echo "👟👟 You have been running with $user_company for \033[1m$days_passed\033[0m days. Keep going! 👟👟"
+        echo -e "\033[1m["$(date +"%Y-%m-%d %H:%M:%S")"] - ${@}\033[0m 👟👟 You have been running with $user_company for \033[1m$days_passed\033[0m days. Keep going! 👟👟"
     fi
 }
 
